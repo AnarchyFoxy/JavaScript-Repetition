@@ -144,3 +144,65 @@ switch (my_name)
         console.log("Imię to ani Astryda, ani Andromeda");
         break;
 }
+
+let first_val = 5;
+let second_val = "5";
+
+// if (first_val === second_val)
+// {
+//     console.log("Obie wartości są takie same.");
+// }
+// else
+// {
+//     console.log("Wartości nie są takie same.");
+// }
+
+let my_data_1 = (5).toString() + String(5);
+let my_data_2 = 5 + "5";
+
+console.log("Wynik 1: " + my_data_1);
+console.log("Wynik 2: " + my_data_2);
+
+let first_val_1 = "5";
+let seconv_val_2 = "5";
+let result = Number(first_val_1) + Number(seconv_val_2);
+console.log("Wynik: " + result);
+
+let my_array = new Array();
+my_array[0] = "Astryda";
+my_array[1] = "Gazela";
+my_array[2] = true;
+
+console.log("Moje imię to: " + my_array[0]);
+console.log(my_array[2]);
+my_array[2] = "wtorek";
+console.log(my_array[2]);
+
+for (let i = 0; i < my_array.length; i++)
+{
+    console.log("indeks " + i + " = " + my_array[i]);
+}
+console.log("-------")
+my_array.forEach((value, index) => console.log("Indeks " + index + ": " + value));
+
+let other_array = [...my_array, "Gaxelek", "drapu-drapu", false, "klika sobie"]
+
+for (let i = 0; i < other_array.length; i++)
+{
+    console.log(`Element tablicy o indeksie ${i}: ${other_array[i]}`)
+}
+
+let products =
+[
+    { name: "Python. Wprowadzenie", price: 199, stock: 10 },
+    { name: "Python. Instrukcje dla programisty", price: 100, stock: 5 },
+    { name: "Język C. Szkoła programowania", price: 150, stock: 100 },
+    { name: "Język C++. Szkoła programownia", price: 250, stock: 1 },
+    { name: "Programowanie w języku Rust", price: 199, stock: 0 },
+];
+
+let total_value = products
+    .filter(item => item.stock > 0)
+    .reduce((prev, item) => prev + (item.price * item.stock), 0);
+
+console.log("razem: " + total_value.toFixed(2) + " zł.");
