@@ -100,3 +100,47 @@ let message_function = function (name : any, weather : any)
 }
 
 message_function("Astryda", "śniezny");
+
+let my_func_2 = function(name : string) {
+    let my_local_var : string = "śnieznie";
+    let inner_function = function () {
+        return ("Witaj " + name + "! Dzisiaj mamy " + my_local_var + " cosik, no nie?");
+    }
+    return inner_function();
+}
+
+console.log(my_func_2("Astryda"));
+
+let message_function_2 = function (weather : string) {
+    let message = `Dzisiaj mamy ${weather} dzień.`;
+    console.log(message)
+}
+
+message_function_2("śniezny");
+
+let my_name = "Astryda";
+if (my_name == "Astryda")
+{
+    console.log("Moje imię to " + my_name);
+}
+else if (my_name = "Andromeda")
+{
+    console.log("Imię to Andromeda");
+}
+else
+{
+    console.log("Nie mam pojęcia o co biega");
+}
+
+switch (my_name)
+{
+    case "Astryda":
+        console.log("Moje imię to " + my_name);
+        break;
+    case "Andromeda":
+        console.log("Moje imię to Andromeda.");
+        break;
+    default:
+        console.log("Imię to ani Astryda, ani Andromeda");
+        break;
+}
